@@ -7,8 +7,22 @@ function App() {
   useEffect(() => {
     new Promise((bien, mal)=>{
       setTimeout(() => {
-        // bien(['pera','manzama','uva','papaya']);
-        bien(['Articulo: celular','marca: iphone','precio: $5000000','observacion: usado','stock:3']);
+        bien([
+          {
+            id: '1',
+            title: 'iphone',
+            description: 'usado',
+            price: '$5000000',
+            pictureUrl:'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8aXBob25lfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+          },
+          {
+            id: '2',
+            title: 'huawei',
+            description: 'nuevo',
+            price: '$3000000',
+            pictureUrl:'https://images.unsplash.com/photo-1546706887-a24528987a75?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGh1YXdlaXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+          }
+        ]);
       }, 2000);
     })
     .then(res =>
